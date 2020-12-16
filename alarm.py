@@ -310,6 +310,8 @@ def hash_search(table, value):
     return -1
 
 def init():
+    if not (os.path.exists("saved_alarms.txt")):
+        open("saved_alarms.txt", "x")
     file = open("saved_alarms.txt", "r")
     for line in file:
         j = 0
